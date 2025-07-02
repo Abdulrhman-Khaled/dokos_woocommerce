@@ -1,0 +1,401 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2022-12-07 07:55:26.488696",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "general_details_tab",
+  "woocommerce_server_url",
+  "enable_sync",
+  "column_break_2",
+  "last_synchronization_datetime",
+  "sb_00",
+  "secret",
+  "cb_00",
+  "api_consumer_key",
+  "api_consumer_secret",
+  "endpoints",
+  "endpoint",
+  "synchronization_settings_section",
+  "create_payments_and_sales_invoice",
+  "synchronize_stock_levels",
+  "synchronize_based_on",
+  "column_break_16",
+  "woocommerce_site_timezone",
+  "currency_precision",
+  "defaults_section",
+  "warehouse",
+  "sales_order_series",
+  "price_list",
+  "column_break_14",
+  "company",
+  "cost_center",
+  "customer_group",
+  "delivery_after_days",
+  "weight_unit",
+  "default_uom",
+  "sb_accounting_details",
+  "get_tax_account",
+  "tax_accounts",
+  "vat_is_included",
+  "section_break_28",
+  "stripe_gateway",
+  "shipping_tab",
+  "shipping_statuses",
+  "section_break_mdtv",
+  "get_shipping_methods",
+  "shipping_accounts",
+  "fee_account",
+  "customers_tab",
+  "customer_groups_to_synchronize",
+  "synchronize_roles",
+  "synchronize_vat_number",
+  "worpdress_api_section",
+  "wp_api_username",
+  "wp_application_password"
+ ],
+ "fields": [
+  {
+   "fieldname": "general_details_tab",
+   "fieldtype": "Tab Break",
+   "label": "General Details"
+  },
+  {
+   "default": "0",
+   "fieldname": "enable_sync",
+   "fieldtype": "Check",
+   "label": "Enable Sync"
+  },
+  {
+   "fieldname": "column_break_2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "depends_on": "eval:doc.enable_sync",
+   "fieldname": "last_synchronization_datetime",
+   "fieldtype": "Datetime",
+   "label": "Last synchronization datetime",
+   "reqd": 1
+  },
+  {
+   "depends_on": "eval:doc.enable_sync",
+   "fieldname": "sb_00",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "woocommerce_server_url",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Woocommerce Server URL",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "secret",
+   "fieldtype": "Code",
+   "label": "Secret",
+   "read_only": 1
+  },
+  {
+   "fieldname": "cb_00",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "api_consumer_key",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "API consumer key"
+  },
+  {
+   "fieldname": "api_consumer_secret",
+   "fieldtype": "Password",
+   "in_list_view": 1,
+   "label": "API consumer secret"
+  },
+  {
+   "depends_on": "eval:doc.enable_sync",
+   "fieldname": "endpoints",
+   "fieldtype": "Section Break",
+   "label": "Endpoints"
+  },
+  {
+   "fieldname": "endpoint",
+   "fieldtype": "Code",
+   "label": "Endpoint",
+   "read_only": 1
+  },
+  {
+   "depends_on": "eval:doc.enable_sync",
+   "fieldname": "synchronization_settings_section",
+   "fieldtype": "Section Break",
+   "label": "Synchronization Settings"
+  },
+  {
+   "default": "1",
+   "fieldname": "create_payments_and_sales_invoice",
+   "fieldtype": "Check",
+   "label": "Create payments and sales invoice"
+  },
+  {
+   "default": "0",
+   "description": "Synchronization will be based on stock levels in Dokos",
+   "fieldname": "synchronize_stock_levels",
+   "fieldtype": "Check",
+   "label": "Synchronize stock levels"
+  },
+  {
+   "fieldname": "column_break_16",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "woocommerce_site_timezone",
+   "fieldtype": "Select",
+   "label": "WooCommerce Site Timezone"
+  },
+  {
+   "description": "Will update the currency precision in sales orders and sales invoices",
+   "fieldname": "currency_precision",
+   "fieldtype": "Select",
+   "label": "Currency Precision",
+   "options": "\n2\n3\n4\n5\n6\n7\n8\n9"
+  },
+  {
+   "depends_on": "eval:doc.enable_sync",
+   "fieldname": "defaults_section",
+   "fieldtype": "Tab Break",
+   "label": "Defaults"
+  },
+  {
+   "fieldname": "warehouse",
+   "fieldtype": "Link",
+   "label": "Default Warehouse",
+   "options": "Warehouse",
+   "reqd": 1
+  },
+  {
+   "fieldname": "sales_order_series",
+   "fieldtype": "Select",
+   "label": "Sales Order Series",
+   "reqd": 1
+  },
+  {
+   "fieldname": "price_list",
+   "fieldtype": "Link",
+   "label": "Price List",
+   "options": "Price List",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_14",
+   "fieldtype": "Column Break"
+  },
+  {
+   "description": "This company will be used to create Sales Orders.",
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Company",
+   "options": "Company",
+   "reqd": 1
+  },
+  {
+   "fieldname": "cost_center",
+   "fieldtype": "Link",
+   "label": "Cost Center",
+   "options": "Cost Center",
+   "reqd": 1
+  },
+  {
+   "fieldname": "customer_group",
+   "fieldtype": "Link",
+   "label": "Customer Group",
+   "options": "Customer Group",
+   "reqd": 1
+  },
+  {
+   "description": "This is the default offset (days) for the Delivery Date in Sales Orders. The fallback offset is 7 days from the order placement date.",
+   "fieldname": "delivery_after_days",
+   "fieldtype": "Int",
+   "label": "Delivery After (Days)"
+  },
+  {
+   "fieldname": "weight_unit",
+   "fieldtype": "Link",
+   "label": "Weight Unit",
+   "options": "UOM",
+   "reqd": 1
+  },
+  {
+   "fieldname": "default_uom",
+   "fieldtype": "Link",
+   "label": "Default Unit of Measure",
+   "options": "UOM",
+   "reqd": 1
+  },
+  {
+   "depends_on": "eval:!doc.__islocal&&doc.enable_sync",
+   "fieldname": "sb_accounting_details",
+   "fieldtype": "Tab Break",
+   "label": "Accounting Details"
+  },
+  {
+   "fieldname": "get_tax_account",
+   "fieldtype": "Button",
+   "label": "Get tax accounts"
+  },
+  {
+   "fieldname": "tax_accounts",
+   "fieldtype": "Table",
+   "label": "Tax Accounts",
+   "options": "Woocommerce Taxes"
+  },
+  {
+   "depends_on": "eval:doc.enable_sync",
+   "fieldname": "section_break_28",
+   "fieldtype": "Section Break",
+   "label": "Stripe Settings"
+  },
+  {
+   "fieldname": "stripe_gateway",
+   "fieldtype": "Link",
+   "label": "Stripe Gateway",
+   "options": "Payment Gateway"
+  },
+  {
+   "depends_on": "eval:!doc.__islocal&&doc.enable_sync",
+   "fieldname": "shipping_tab",
+   "fieldtype": "Tab Break",
+   "label": "Shipping"
+  },
+  {
+   "fieldname": "get_shipping_methods",
+   "fieldtype": "Button",
+   "label": "Get Shipping Methods"
+  },
+  {
+   "fieldname": "shipping_accounts",
+   "fieldtype": "Table",
+   "label": "Woocommerce Shipping Methods",
+   "options": "Woocommerce Shipping Methods"
+  },
+  {
+   "fieldname": "fee_account",
+   "fieldtype": "Link",
+   "label": "Fee Account",
+   "options": "Account"
+  },
+  {
+   "depends_on": "eval:!doc.__islocal&&doc.enable_sync",
+   "description": "Add a customer group in the table below to synchronize all customers linked to this group",
+   "fieldname": "customers_tab",
+   "fieldtype": "Tab Break",
+   "label": "Customers"
+  },
+  {
+   "fieldname": "customer_groups_to_synchronize",
+   "fieldtype": "Table",
+   "label": "Customer groups to synchronize",
+   "options": "Woocommerce Customer Role Mapping"
+  },
+  {
+   "default": "0",
+   "depends_on": "eval:doc.customer_groups_to_synchronize",
+   "fieldname": "synchronize_roles",
+   "fieldtype": "Check",
+   "label": "Synchronize Roles"
+  },
+  {
+   "default": "0",
+   "depends_on": "eval:doc.customer_groups_to_synchronize",
+   "fieldname": "synchronize_vat_number",
+   "fieldtype": "Check",
+   "label": "Synchronize VAT Number"
+  },
+  {
+   "depends_on": "eval:doc.synchronize_roles",
+   "fieldname": "worpdress_api_section",
+   "fieldtype": "Section Break",
+   "label": "Worpdress API"
+  },
+  {
+   "fieldname": "wp_api_username",
+   "fieldtype": "Data",
+   "label": "API Username",
+   "mandatory_depends_on": "eval:doc.synchronize_roles"
+  },
+  {
+   "fieldname": "wp_application_password",
+   "fieldtype": "Password",
+   "label": "Application Password",
+   "mandatory_depends_on": "eval:doc.synchronize_roles"
+  },
+  {
+   "default": "Projected Qty",
+   "depends_on": "eval:doc.synchronize_stock_levels",
+   "fieldname": "synchronize_based_on",
+   "fieldtype": "Select",
+   "label": "Synchronize based on",
+   "mandatory_depends_on": "eval:doc.synchronize_stock_levels",
+   "options": "Projected Qty\nActual Qty"
+  },
+  {
+   "default": "0",
+   "fieldname": "vat_is_included",
+   "fieldtype": "Check",
+   "label": "Prices registered with VAT included on WooCommerce"
+  },
+  {
+   "description": "Delivery notes will be created when WooCommerce orders have one of the following statuses",
+   "fieldname": "shipping_statuses",
+   "fieldtype": "Table",
+   "label": "Shipping Statuses",
+   "options": "Woocommerce Shipping Statuses"
+  },
+  {
+   "fieldname": "section_break_mdtv",
+   "fieldtype": "Section Break"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-06-10 09:46:31.973889",
+ "modified_by": "Administrator",
+ "module": "WooCommerce",
+ "name": "Woocommerce Settings",
+ "naming_rule": "Autoincrement",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "System Manager",
+   "select": 1,
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Sales Master Manager",
+   "select": 1,
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "show_title_field_in_link": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "woocommerce_server_url",
+ "track_changes": 1
+}

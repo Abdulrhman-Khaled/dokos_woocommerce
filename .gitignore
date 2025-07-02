@@ -1,0 +1,11 @@
+.DS_Store
+*.pyc
+*.egg-info
+*.swp
+tags
+dokos_woocommerce/docs/current
+node_modules/
+
+# Translations
+*.pot
+*.mo

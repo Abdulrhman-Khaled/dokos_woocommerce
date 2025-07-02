@@ -1,0 +1,803 @@
+# French translations for WooCommerce.
+# Copyright (C) 2024 Dokos SAS
+# This file is distributed under the same license as the WooCommerce project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: WooCommerce VERSION\n"
+"Report-Msgid-Bugs-To: hello@dokos.io\n"
+"POT-Creation-Date: 2025-05-26 17:56+0009\n"
+"PO-Revision-Date: 2025-05-26 17:57+0200\n"
+"Last-Translator: hello@dokos.io\n"
+"Language-Team: hello@dokos.io\n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"Generated-By: Babel 2.13.1\n"
+"X-Generator: Poedit 3.4.2\n"
+
+#: woocommerce/report/woocommerce_out_of_stock_comparison/woocommerce_out_of_stock_comparison.py:73
+#: woocommerce/report/woocommerce_stock_comparison/woocommerce_stock_comparison.py:94
+msgid "A network error prevented fetching WooCommerce data. Please try again in a minute."
+msgstr "Une erreur de réseau a bloqué la récupération des données de WooCommerce. Veuillez réessayer dans une minute."
+
+#: woocommerce/notification/woocommerce_order_error/woocommerce_order_error.html:15
+msgid "A status update on WooCommerce Side"
+msgstr "Une mise à jour de statut sur WooCommerce"
+
+#. Label of the wp_api_username (Data) field in DocType 'Woocommerce Settings'
+#: woocommerce/doctype/woocommerce_settings/woocommerce_settings.json
+msgid "API Username"
+msgstr "Nom d'utilisateur pour l'API"
+
+#. Label of the api_consumer_key (Data) field in DocType 'Woocommerce Settings'
+#: woocommerce/doctype/woocommerce_settings/woocommerce_settings.json
+msgid "API consumer key"
+msgstr "Clé API publique"
+
+#. Label of the api_consumer_secret (Password) field in DocType 'Woocommerce
+#. Settings'
+#: woocommerce/doctype/woocommerce_settings/woocommerce_settings.json
+msgid "API consumer secret"
+msgstr "Clé API secrète"
+
+#. Label of the account (Link) field in DocType 'Woocommerce Shipping Methods'
+#. Label of the account (Link) field in DocType 'Woocommerce Taxes'
+#: woocommerce/doctype/woocommerce_shipping_methods/woocommerce_shipping_methods.json
+#: woocommerce/doctype/woocommerce_taxes/woocommerce_taxes.json
+msgid "Account"
+msgstr "Compte"
+
+#. Label of the sb_accounting_details (Tab Break) field in DocType 'Woocommerce
+#. Settings'
+#: woocommerce/doctype/woocommerce_settings/woocommerce_settings.json
+msgid "Accounting Details"
+msgstr "Détails comptables"
+
+#: woocommerce/doctype/woocommerce_order/woocommerce_order.js:18
+#: woocommerce/doctype/woocommerce_order/woocommerce_order.js:23
+#: woocommerce/doctype/woocommerce_settings/woocommerce_settings.js:111
+#: woocommerce/doctype/woocommerce_settings/woocommerce_settings.js:130
+#: woocommerce/doctype/woocommerce_settings/woocommerce_settings.js:149
+msgid "Actions"
+msgstr "Actions"
+
+#. Option for the 'Synchronize based on' (Select) field in DocType 'Woocommerce
+#. Settings'
+#: woocommerce/doctype/woocommerce_settings/woocommerce_settings.json
+msgid "Actual Qty"
+msgstr "Qté actuelle"
+
+#: woocommerce/doctype/woocommerce_settings/woocommerce_settings.js:134
+msgid "Add Dokos customers to WooCommerce ?"
+msgstr "Ajouter les clients Dokos dans WooCommerce ?"
+
+#: woocommerce/doctype/woocommerce_settings/woocommerce_settings.js:115
+msgid "Add Dokos items to WooCommerce ?"
+msgstr "Ajouter les articles Dokos dans WooCommerce ?"
+
+#: woocommerce/doctype/woocommerce_settings/woocommerce_settings.js:96
+msgid "Add WooCommerce products to Dokos ?"
+msgstr "Ajouter les produits WooCommerce dans Dokos ?"
+
+#. Description of the 'Customers' (Tab Break) field in DocType 'Woocommerce
+#. Settings'
+#: woocommerce/doctype/woocommerce_settings/woocommerce_settings.json
+msgid "Add a customer group in the table below to synchronize all customers linked to this group"
+msgstr "Ajoutez un groupe de client dans la table ci-dessous pour synchronisez tous les clients liés à ce groupe"
+
+#: public/js/item_booking.js:14
+msgid "Any date modification needs to be done at <a href='{}' target='_blank'>this address</a>."
+msgstr "Toute modification de date doit être effectuée <a href='{}' target='_blank'>cette adresse</a>."
+
+#. Label of the wp_application_password (Password) field in DocType
+#. 'Woocommerce Settings'
+#: woocommerce/doctype/woocommerce_settings/woocommerce_settings.json
+msgid "Application Password"
+msgstr "Mot de passe d'application"
+
+#: woocommerce/doctype/woocommerce_settings/woocommerce_settings.js:35
+msgid "Apps using current key won't be able to access, are you sure?"
+msgstr "Les applications utilisant la clé actuelle ne pourront plus se connecter, voulez-vous continuer ?"
+
+#: woocommerce/doctype/woocommerce_order/woocommerce_order.js:20
+msgid "Close"
+msgstr "Fermer"
+
+#. Option for the 'Status' (Select) field in DocType 'Woocommerce Order'
+#: woocommerce/doctype/woocommerce_order/woocommerce_order.json
+msgid "Closed"
+msgstr "Fermé"
+
+#. Label of the company (Link) field in DocType 'Woocommerce Settings'
+#: woocommerce/doctype/woocommerce_settings/woocommerce_settings.json
+msgid "Company"
+msgstr "Société"
+
+#. Label of the cost_center (Link) field in DocType 'Woocommerce Settings'
+#: woocommerce/doctype/woocommerce_settings/woocommerce_settings.json
+msgid "Cost Center"
+msgstr "Centre de coûts"
+
+#: woocommerce/doctype/woocommerce_settings/woocommerce_settings.js:46
+msgid "Could not generate Secret"
+msgstr "Le secret n'a pas pu être généré"
+
+#. Label of the create_payments_and_sales_invoice (Check) field in DocType
+#. 'Woocommerce Settings'
+#: woocommerce/doctype/woocommerce_settings/woocommerce_settings.json
+msgid "Create payments and sales invoice"
+msgstr "Créer les factures et les paiements"
+
+#. Label of the currency_precision (Select) field in DocType 'Woocommerce
+#. Settings'
+#: woocommerce/doctype/woocommerce_settings/woocommerce_settings.json
+msgid "Currency Precision"
+msgstr "Précision de la devise"
+
+#. Label of the customer_group (Link) field in DocType 'Woocommerce Settings'
+#: woocommerce/doctype/woocommerce_settings/woocommerce_settings.json
+msgid "Customer Group"
+msgstr "Groupe de clients"
+
+#. Label of the customer_groups_to_synchronize (Table) field in DocType
+#. 'Woocommerce Settings'
+#: woocommerce/doctype/woocommerce_settings/woocommerce_settings.json
+msgid "Customer groups to synchronize"
+msgstr "Groupes de clients à synchroniser"
+
+#. Label of the customers_tab (Tab Break) field in DocType 'Woocommerce
+#. Settings'
+#: woocommerce/doctype/woocommerce_settings/woocommerce_settings.json
+msgid "Customers"
+msgstr "Clients"
+
+#. Label of the data (JSON) field in DocType 'Woocommerce Order'
+#: woocommerce/doctype/woocommerce_order/woocommerce_order.json
+msgid "Data"
+msgstr "Données"
+
+#. Label of the default_uom (Link) field in DocType 'Woocommerce Settings'
+#: woocommerce/doctype/woocommerce_settings/woocommerce_settings.json
+msgid "Default Unit of Measure"
+msgstr "Unité de mesure par défaut"
+
+#. Label of the warehouse (Link) field in DocType 'Woocommerce Settings'
+#: woocommerce/doctype/woocommerce_settings/woocommerce_settings.json
+msgid "Default Warehouse"
+msgstr "Entrepôt par défaut"
+
+#. Label of the defaults_section (Tab Break) field in DocType 'Woocommerce
+#. Settings'
+#: woocommerce/doctype/woocommerce_settings/woocommerce_settings.json
+msgid "Defaults"
+msgstr "Valeurs par défaut"
+
+#. Label of the delivery_after_days (Int) field in DocType 'Woocommerce
+#. Settings'
+#: woocommerce/doctype/woocommerce_settings/woocommerce_settings.json
+msgid "Delivery After (Days)"
+msgstr "Livrer après (Jours)"
+
+#. Label of the delivery_note_created (Check) field in DocType 'Woocommerce
+#. Order'
+#: woocommerce/doctype/woocommerce_order/woocommerce_order.json
+msgid "Delivery Note Created"
+msgstr "Bon de livraison créé"
+
+#. Description of the 'Shipping Statuses' (Table) field in DocType 'Woocommerce
+#. Settings'
+#: woocommerce/doctype/woocommerce_settings/woocommerce_settings.json
+msgid "Delivery notes will be created when WooCommerce orders have one of the following statuses"
+msgstr "Les bons de livraison seront créés quand les commandes WooCommerce ont l'un des statuts suivants"
+
+#. Label of a number card in the WooCommerce Workspace
+#: woocommerce/workspace/woocommerce/woocommerce.json
+msgid "Disabled or Paused Webhooks on WooCommerce"
+msgstr "Webhooks désactivés ou mis en pause sur WooCommerce"
+
+#. Label of the dokos_customer_group (Link) field in DocType 'Woocommerce
+#. Customer Role Mapping'
+#: woocommerce/doctype/woocommerce_customer_role_mapping/woocommerce_customer_role_mapping.json
+msgid "Dokos Customer Group"
+msgstr "Groupes de clients Dokos"
+
+#: woocommerce/report/woocommerce_out_of_stock_comparison/woocommerce_out_of_stock_comparison.py:44
+#: woocommerce/report/woocommerce_stock_comparison/woocommerce_stock_comparison.py:47
+msgid "Dokos Stock Level"
+msgstr "Niveau de stocks dans Dokos"
+
+#: woocommerce/doctype/woocommerce_settings/woocommerce_settings.js:138
+msgid "Dokos customers are being pushed to WooCommerce"
+msgstr "Les clients Dokos sont envoyés dans WooCommerce"
+
+#: woocommerce/doctype/woocommerce_settings/woocommerce_settings.js:119
+msgid "Dokos items are being pushed to WooCommerce"
+msgstr "Les articles de Dokos sont envoyés dans WooCommerce"
+
+#. Label of the enable_sync (Check) field in DocType 'Woocommerce Settings'
+#: woocommerce/doctype/woocommerce_settings/woocommerce_settings.json
+msgid "Enable Sync"
+msgstr "Activer la synchronisation"
+
+#. Label of the endpoint (Code) field in DocType 'Woocommerce Settings'
+#: woocommerce/doctype/woocommerce_settings/woocommerce_settings.json
+msgid "Endpoint"
+msgstr "Point de terminaison"
+
+#. Label of the endpoints (Section Break) field in DocType 'Woocommerce
+#. Settings'
+#: woocommerce/doctype/woocommerce_settings/woocommerce_settings.json
+msgid "Endpoints"
+msgstr "Points de terminaison"
+
+#. Option for the 'Status' (Select) field in DocType 'Woocommerce Order'
+#. Label of the error (Small Text) field in DocType 'Woocommerce Order'
+#: woocommerce/doctype/woocommerce_order/woocommerce_order.json
+msgid "Error"
+msgstr "Erreur"
+
+#. Label of the error_message (Small Text) field in DocType 'Woocommerce Order'
+#: woocommerce/doctype/woocommerce_order/woocommerce_order.json
+msgid "Error Message"
+msgstr "Message d'erreur"
+
+#. Label of the error_notification_sent (Check) field in DocType 'Woocommerce
+#. Order'
+#: woocommerce/doctype/woocommerce_order/woocommerce_order.json
+msgid "Error Notification Sent"
+msgstr "Notification d'erreur envoyée"
+
+#. Label of the fee_account (Link) field in DocType 'Woocommerce Settings'
+#: woocommerce/doctype/woocommerce_settings/woocommerce_settings.json
+msgid "Fee Account"
+msgstr "Compte de frais"
+
+#. Label of the general_details_tab (Tab Break) field in DocType 'Woocommerce
+#. Settings'
+#: woocommerce/doctype/woocommerce_settings/woocommerce_settings.json
+msgid "General Details"
+msgstr "Informations générales"
+
+#: woocommerce/doctype/woocommerce_settings/woocommerce_settings.js:33
+#: woocommerce/doctype/woocommerce_settings/woocommerce_settings_tour.js:21
+#: woocommerce/doctype/woocommerce_settings/woocommerce_settings_tour.js:22
+msgid "Generate Secret"
+msgstr "Générer un secret"
+
+#. Label of the get_shipping_methods (Button) field in DocType 'Woocommerce
+#. Settings'
+#: woocommerce/doctype/woocommerce_settings/woocommerce_settings.json
+msgid "Get Shipping Methods"
+msgstr "Obtenir les méthodes de livraison"
+
+#: woocommerce/doctype/woocommerce_settings/woocommerce_settings.js:94
+msgid "Get WooCommerce products"
+msgstr ""
+"Obtenir les produits depuis\n"
+" WooCommerce"
+
+#. Label of the get_tax_account (Button) field in DocType 'Woocommerce
+#. Settings'
+#: woocommerce/doctype/woocommerce_settings/woocommerce_settings.json
+msgid "Get tax accounts"
+msgstr "Obtenir les comptes de taxe"
+
+#: woocommerce/notification/woocommerce_order_error/woocommerce_order_error.html:19
+msgid "Have a nice day"
+msgstr "Bonne journée"
+
+#: woocommerce/notification/woocommerce_order_error/woocommerce_order_error.html:1
+msgid "Hello"
+msgstr "Bonjour"
+
+#: woocommerce/report/woocommerce_out_of_stock_comparison/woocommerce_out_of_stock_comparison.py:26
+#: woocommerce/report/woocommerce_stock_comparison/woocommerce_stock_comparison.py:23
+msgid "Item"
+msgstr "Article"
+
+#: woocommerce/report/woocommerce_out_of_stock_comparison/woocommerce_out_of_stock_comparison.py:32
+#: woocommerce/report/woocommerce_stock_comparison/woocommerce_stock_comparison.py:29
+msgid "Item Name"
+msgstr "Désignation de l'article"
+
+#: woocommerce/doctype/woocommerce_order/woocommerce_order.py:378
+msgid "Item missing for Woocommerce product: {0}"
+msgstr "Article manquant pour le produit WooCommerce: {0}"
+
+#. Label of the last_synchronization_datetime (Datetime) field in DocType
+#. 'Woocommerce Settings'
+#: woocommerce/doctype/woocommerce_settings/woocommerce_settings.json
+msgid "Last synchronization datetime"
+msgstr "Dernière synchronisation"
+
+#: woocommerce/report/woocommerce_out_of_stock_comparison/woocommerce_out_of_stock_comparison.js:32
+#: woocommerce/report/woocommerce_stock_comparison/woocommerce_stock_comparison.js:17
+msgid "Linked Reports"
+msgstr "Rapports liés"
+
+#: woocommerce/notification/woocommerce_order_error/woocommerce_order_error.html:16
+msgid "Once a day, during the night, by Dokos"
+msgstr "Une fois par jour, pendant la nuit, par Dokos"
+
+#. Option for the 'Status' (Select) field in DocType 'Woocommerce Order'
+#. Label of the order_created (Check) field in DocType 'Woocommerce Order'
+#: woocommerce/doctype/woocommerce_order/woocommerce_order.json
+msgid "Order Created"
+msgstr "Commande créee"
+
+#. Option for the 'Status' (Select) field in DocType 'Woocommerce Order'
+#: woocommerce/doctype/woocommerce_order/woocommerce_order.json
+msgid "Order Updated"
+msgstr "Commande mise à jour"
+
+#. Label of a quick list in the WooCommerce Workspace
+#: woocommerce/workspace/woocommerce/woocommerce.json
+msgid "Orders Integration Errors"
+msgstr "Commandes WooCommerce en erreur"
+
+#. Label of a number card in the WooCommerce Workspace
+#: woocommerce/workspace/woocommerce/woocommerce.json
+msgid "Orders in error"
+msgstr "Commandes en erreur"
+
+#. Label of a number card in the WooCommerce Workspace
+#: woocommerce/workspace/woocommerce/woocommerce.json
+msgid "Orders pending delivery"
+msgstr "Commandes en attente de livraison"
+
+#. Label of a number card in the WooCommerce Workspace
+#: woocommerce/workspace/woocommerce/woocommerce.json
+msgid "Orders without sales invoices"
+msgstr "Commandes non facturées"
+
+#. Label of a number card in the WooCommerce Workspace
+#: woocommerce/workspace/woocommerce/woocommerce.json
+msgid "Out of Stock Items"
+msgstr "Articles en pénurie"
+
+#. Label of the payment_created (Check) field in DocType 'Woocommerce Order'
+#: woocommerce/doctype/woocommerce_order/woocommerce_order.json
+msgid "Payment Created"
+msgstr "Paiement créé"
+
+#. Option for the 'Status' (Select) field in DocType 'Woocommerce Order'
+#: woocommerce/doctype/woocommerce_order/woocommerce_order.json
+msgid "Pending"
+msgstr "En attente"
+
+#: woocommerce/notification/woocommerce_order_error/woocommerce_order_error.html:9
+msgid "Please check the corresponding order to solve the issue and try relaunching the integration"
+msgstr "Veuillez vérifier la commande associée pour résoudre le problème et essayez de relancer l'intégration"
+
+#: woocommerce/doctype/woocommerce_settings/api/__init__.py:37
+#: woocommerce/doctype/woocommerce_settings/api/webhooks.py:38
+msgid "Please check your connexion to your WooCommerce site"
+msgstr "Veuillez vérifier votre connexion au site WooCommerce"
+
+#: woocommerce/doctype/woocommerce_settings/woocommerce_settings.py:131
+msgid "Please enter API Consumer Key"
+msgstr "Veuillez entrer la clé de connexion à l'API"
+
+#: woocommerce/doctype/woocommerce_settings/woocommerce_settings.py:134
+msgid "Please enter API Consumer Secret"
+msgstr "Veuillez entrer le secret de connexion à l'API"
+
+#: woocommerce/doctype/woocommerce_settings/woocommerce_settings.py:125
+msgid "Please enter Woocommerce Server URL"
+msgstr "Veuillez entrer l'URL du serveur WooCommerce"
+
+#. Label of the price_list (Link) field in DocType 'Woocommerce Settings'
+#: woocommerce/doctype/woocommerce_settings/woocommerce_settings.json
+msgid "Price List"
+msgstr "Liste de prix"
+
+#. Label of the vat_is_included (Check) field in DocType 'Woocommerce Settings'
+#: woocommerce/doctype/woocommerce_settings/woocommerce_settings.json
+msgid "Prices registered with VAT included on WooCommerce"
+msgstr "Les prix sont enregistrés TTC sur WooCommerce"
+
+#: woocommerce/doctype/woocommerce_settings/api/products.py:41
+msgid ""
+"Product: {0}\n"
+"\n"
+"{1}"
+msgstr ""
+"Produit: {0}\n"
+"\n"
+"{1}"
+
+#. Option for the 'Synchronize based on' (Select) field in DocType 'Woocommerce
+#. Settings'
+#: woocommerce/doctype/woocommerce_settings/woocommerce_settings.json
+msgid "Projected Qty"
+msgstr "Qté projectée"
+
+#: woocommerce/doctype/woocommerce_settings/woocommerce_settings.js:132
+msgid "Push Customers to WooCommerce"
+msgstr "Envoyer les clients dans WooCommerce"
+
+#: woocommerce/doctype/woocommerce_settings/woocommerce_settings.js:113
+msgid "Push items to WooCommerce"
+msgstr "Pousser les articles dans WooCommerce"
+
+#. Header text in the WooCommerce Workspace
+#: woocommerce/workspace/woocommerce/woocommerce.json
+msgid "Reports"
+msgstr "Rapports"
+
+#: woocommerce/doctype/woocommerce_order/woocommerce_order.js:6
+msgid "Retry"
+msgstr "Réessayer"
+
+#: woocommerce/doctype/woocommerce_order/woocommerce_order.js:14
+#: woocommerce/doctype/woocommerce_order/woocommerce_order_list.js:14
+msgid "Retry in progress"
+msgstr "Nouvelle tentative en cours"
+
+#: woocommerce/doctype/woocommerce_order/woocommerce_order_list.js:5
+msgid "Retry orders creation"
+msgstr "Relancer l'intégration des commandes"
+
+#. Label of the sales_invoice_created (Check) field in DocType 'Woocommerce
+#. Order'
+#: woocommerce/doctype/woocommerce_order/woocommerce_order.json
+msgid "Sales Invoice Created"
+msgstr "Facture créée"
+
+#. Name of a role
+#: woocommerce/doctype/woocommerce_settings/woocommerce_settings.json
+msgid "Sales Master Manager"
+msgstr "Responsable des données de vente"
+
+#: woocommerce/doctype/woocommerce_order/woocommerce_order.js:27
+msgid "Sales Order"
+msgstr "Commande client"
+
+#. Label of the sales_order_series (Select) field in DocType 'Woocommerce
+#. Settings'
+#: woocommerce/doctype/woocommerce_settings/woocommerce_settings.json
+msgid "Sales Order Series"
+msgstr "Séries à utiliser pour les commandes"
+
+#. Label of the secret (Code) field in DocType 'Woocommerce Settings'
+#: woocommerce/doctype/woocommerce_settings/woocommerce_settings.json
+msgid "Secret"
+msgstr "Secret"
+
+#. Header text in the WooCommerce Workspace
+#: woocommerce/workspace/woocommerce/woocommerce.json
+msgid "Settings "
+msgstr "Paramètres "
+
+#. Label of the shipping_tab (Tab Break) field in DocType 'Woocommerce
+#. Settings'
+#: woocommerce/doctype/woocommerce_settings/woocommerce_settings.json
+msgid "Shipping"
+msgstr "Livraison"
+
+#. Label of the shipping_status (Data) field in DocType 'Woocommerce Shipping
+#. Statuses'
+#: woocommerce/doctype/woocommerce_shipping_statuses/woocommerce_shipping_statuses.json
+msgid "Shipping Status"
+msgstr "Statut d'expédition"
+
+#. Label of the shipping_statuses (Table) field in DocType 'Woocommerce
+#. Settings'
+#: woocommerce/doctype/woocommerce_settings/woocommerce_settings.json
+msgid "Shipping Statuses"
+msgstr "Statuts d'expédition"
+
+#. Label of the status (Select) field in DocType 'Woocommerce Order'
+#: woocommerce/doctype/woocommerce_order/woocommerce_order.json
+msgid "Status"
+msgstr "Statut"
+
+#: woocommerce/report/woocommerce_stock_comparison/woocommerce_stock_comparison.py:53
+msgid "Stock Difference"
+msgstr "Différence de stocks"
+
+#. Label of the stripe_gateway (Link) field in DocType 'Woocommerce Settings'
+#: woocommerce/doctype/woocommerce_settings/woocommerce_settings.json
+msgid "Stripe Gateway"
+msgstr "Passerelle de paiement Stripe"
+
+#. Label of the section_break_28 (Section Break) field in DocType 'Woocommerce
+#. Settings'
+#: woocommerce/doctype/woocommerce_settings/woocommerce_settings.json
+msgid "Stripe Settings"
+msgstr "Paramètres Stripe"
+
+#. Label of the synchronization_settings_section (Section Break) field in
+#. DocType 'Woocommerce Settings'
+#: woocommerce/doctype/woocommerce_settings/woocommerce_settings.json
+msgid "Synchronization Settings"
+msgstr "Paramètres de synchronisation"
+
+#. Description of the 'Synchronize stock levels' (Check) field in DocType
+#. 'Woocommerce Settings'
+#: woocommerce/doctype/woocommerce_settings/woocommerce_settings.json
+msgid "Synchronization will be based on stock levels in Dokos"
+msgstr "La synchronisation sera basée sur les niveaux de stock dans Dokos"
+
+#. Label of the synchronize_roles (Check) field in DocType 'Woocommerce
+#. Settings'
+#: woocommerce/doctype/woocommerce_settings/woocommerce_settings.json
+msgid "Synchronize Roles"
+msgstr "Synchroniser les rôles"
+
+#. Label of the synchronize_vat_number (Check) field in DocType 'Woocommerce
+#. Settings'
+#: woocommerce/doctype/woocommerce_settings/woocommerce_settings.json
+msgid "Synchronize VAT Number"
+msgstr "Synchroniser le numéro de TVA"
+
+#. Label of the synchronize_based_on (Select) field in DocType 'Woocommerce
+#. Settings'
+#: woocommerce/doctype/woocommerce_settings/woocommerce_settings.json
+msgid "Synchronize based on"
+msgstr "Synchroniser sur la base de"
+
+#. Label of the synchronize_stock_levels (Check) field in DocType 'Woocommerce
+#. Settings'
+#: woocommerce/doctype/woocommerce_settings/woocommerce_settings.json
+msgid "Synchronize stock levels"
+msgstr "Synchroniser les niveaux de stock"
+
+#. Name of a role
+#: woocommerce/doctype/woocommerce_order/woocommerce_order.json
+#: woocommerce/doctype/woocommerce_settings/woocommerce_settings.json
+msgid "System Manager"
+msgstr "Responsable système"
+
+#. Label of the tax_accounts (Table) field in DocType 'Woocommerce Settings'
+#: woocommerce/doctype/woocommerce_settings/woocommerce_settings.json
+msgid "Tax Accounts"
+msgstr "Comptes de taxe"
+
+#: woocommerce/notification/woocommerce_order_error/woocommerce_order_error.html:3
+msgid "The following error prevented the full integration of WooCommerce Order {0}"
+msgstr "L'erreur suivante a empêché l'intégration complète de la commande WooCommerce {0}"
+
+#: public/js/item_booking.js:13
+msgid "This booking has been created in WooCommerce Booking.\n"
+msgstr "Cette réservation a été créée dans WooCommerce Booking.\n"
+
+#. Description of the 'Company' (Link) field in DocType 'Woocommerce Settings'
+#: woocommerce/doctype/woocommerce_settings/woocommerce_settings.json
+msgid "This company will be used to create Sales Orders."
+msgstr "Cette société sera utilisée pour créer des commandes clients."
+
+#. Description of the 'Delivery After (Days)' (Int) field in DocType
+#. 'Woocommerce Settings'
+#: woocommerce/doctype/woocommerce_settings/woocommerce_settings.json
+msgid "This is the default offset (days) for the Delivery Date in Sales Orders. The fallback offset is 7 days from the order placement date."
+msgstr "Décalage par défaut (en jours) pour la date de livraison dans les bons de commandes."
+
+#: woocommerce_connection.py:41
+msgid "Unverified Webhook Data"
+msgstr "Données de webhook non vérifiées"
+
+#: woocommerce/report/woocommerce_out_of_stock_comparison/woocommerce_out_of_stock_comparison.js:14
+msgid "Update Stock Levels"
+msgstr "Mettre à jour les niveaux de stock"
+
+#. Label of the weight_unit (Link) field in DocType 'Woocommerce Settings'
+#: woocommerce/doctype/woocommerce_settings/woocommerce_settings.json
+msgid "Weight Unit"
+msgstr "Unité de poids"
+
+#. Description of the 'Currency Precision' (Select) field in DocType
+#. 'Woocommerce Settings'
+#: woocommerce/doctype/woocommerce_settings/woocommerce_settings.json
+msgid "Will update the currency precision in sales orders and sales invoices"
+msgstr "Mettra à jour la précision de la devise dans les commandes et factures client"
+
+#: woocommerce/notification/woocommerce_order_error/woocommerce_order_error.html:11
+msgid "Without action from your side, an integration attempt will be automatically triggered on the following events"
+msgstr "Sans action de votre part, une tentative d'intégration sera déclenchée automatiquement par les événements suivants"
+
+#. Name of a Workspace
+#. Header text in the WooCommerce Workspace
+#: config/desktop.py:8 woocommerce/workspace/woocommerce/woocommerce.json
+msgid "WooCommerce"
+msgstr "WooCommerce"
+
+#. Label of the woocommerce_id (Data) field in DocType 'Woocommerce Order'
+#: woocommerce/doctype/woocommerce_order/woocommerce_order.json
+#: woocommerce/report/woocommerce_out_of_stock_comparison/woocommerce_out_of_stock_comparison.py:38
+#: woocommerce/report/woocommerce_stock_comparison/woocommerce_stock_comparison.py:35
+msgid "WooCommerce ID"
+msgstr "ID WooCommerce"
+
+#: woocommerce/doctype/woocommerce_order/woocommerce_order.py:596
+#: woocommerce/doctype/woocommerce_order/woocommerce_order.py:662
+msgid "WooCommerce Order"
+msgstr "Commande WooCommerce"
+
+#: woocommerce/doctype/woocommerce_order/woocommerce_order.py:263
+msgid "WooCommerce Order ({0}) and Sales Order ({1}) totals don't match"
+msgstr "Le total de la commande WooCommerce ({0}) et de la commande Dokos ({1}) ne correspondent pas"
+
+#: woocommerce/doctype/woocommerce_order/woocommerce_order.py:535
+msgid ""
+"WooCommerce Order: {0}\n"
+"\n"
+"Account head missing for Woocommerce shipping method: {1}"
+msgstr ""
+"Commande WooCommerce: 0}\n"
+"\n"
+"Compte comptable manquant pour la méthode de livraison WooCommerce: {1}"
+
+#: woocommerce/doctype/woocommerce_order/woocommerce_order.py:615
+msgid ""
+"WooCommerce Order: {0}\n"
+"\n"
+"{1}"
+msgstr ""
+"Commande WooCommerce: {0}\n"
+"\n"
+"{1}"
+
+#. Name of a report
+#: woocommerce/report/woocommerce_out_of_stock_comparison/woocommerce_out_of_stock_comparison.json
+#: woocommerce/report/woocommerce_stock_comparison/woocommerce_stock_comparison.js:14
+msgid "WooCommerce Out of Stock Comparison"
+msgstr "Comparaison des pénurie avec WooCommerce"
+
+#. Name of the Number Card'WooCommerce Out of Stock Items'
+#: woocommerce/number_card/woocommerce_out_of_stock_items/woocommerce_out_of_stock_items.json
+msgid "WooCommerce Out of Stock Items"
+msgstr "Articles en pénuries dans WooCommerce"
+
+#: woocommerce/doctype/woocommerce_settings/api/products.py:42
+msgid "WooCommerce Products Sync Error"
+msgstr "Erreur de synchronisation des produits WooCommerce"
+
+#. Label of the woocommerce_role (Data) field in DocType 'Woocommerce Customer
+#. Role Mapping'
+#: woocommerce/doctype/woocommerce_customer_role_mapping/woocommerce_customer_role_mapping.json
+msgid "WooCommerce Role"
+msgstr "Role WooCommerce"
+
+#. Label of the woocommerce_site_timezone (Select) field in DocType
+#. 'Woocommerce Settings'
+#: woocommerce/doctype/woocommerce_settings/woocommerce_settings.json
+msgid "WooCommerce Site Timezone"
+msgstr "Fuseau horaire du site WooCommerce"
+
+#. Name of a report
+#: woocommerce/report/woocommerce_out_of_stock_comparison/woocommerce_out_of_stock_comparison.js:29
+#: woocommerce/report/woocommerce_stock_comparison/woocommerce_stock_comparison.json
+msgid "WooCommerce Stock Comparison"
+msgstr "Comparaison des niveaux de stock avec WooCommerce"
+
+#: woocommerce/report/woocommerce_stock_comparison/woocommerce_stock_comparison.py:41
+msgid "WooCommerce Stock Level"
+msgstr "Niveau de stock dans WooCommerce"
+
+#. Name of the Number Card'WooCommerce Webhooks Healthcheck'
+#: woocommerce/number_card/woocommerce_webhooks_healthcheck/woocommerce_webhooks_healthcheck.json
+msgid "WooCommerce Webhooks Healthcheck"
+msgstr "Etat des webhooks WooCommerce"
+
+#. Name of the Number Card'WooCommerce orders in error'
+#: woocommerce/number_card/woocommerce_orders_in_error/woocommerce_orders_in_error.json
+msgid "WooCommerce orders in error"
+msgstr "Commandes WooCommerce en erreur"
+
+#. Name of the Number Card'WooCommerce orders pending delivery'
+#: woocommerce/number_card/woocommerce_orders_pending_delivery/woocommerce_orders_pending_delivery.json
+msgid "WooCommerce orders pending delivery"
+msgstr "Commandes WooCommerce en attente de livraison"
+
+#. Name of the Number Card'WooCommerce orders without sales invoices'
+#: woocommerce/number_card/woocommerce_orders_without_sales_invoices/woocommerce_orders_without_sales_invoices.json
+msgid "WooCommerce orders without sales invoices"
+msgstr "Commandes WooCommerce sans facture"
+
+#: woocommerce/doctype/woocommerce_settings/woocommerce_settings.js:100
+msgid "WooCommerce products are being added to Dokos"
+msgstr "Les produits WooCommerce sont ajoutés dans Dokos"
+
+#: woocommerce/doctype/woocommerce_settings/api/customers.py:311
+msgid "Woocommerce Address Error"
+msgstr "Erreur d'adresse WooCommerce"
+
+#: woocommerce/doctype/woocommerce_settings/api/customers.py:345
+msgid "Woocommerce Contact Error"
+msgstr "Erreur de contact WooCommerce"
+
+#: woocommerce/doctype/woocommerce_settings/api/customers.py:244
+msgid "Woocommerce Customer Creation Error"
+msgstr "Erreur de création de client WooCommerce"
+
+#. Name of a DocType
+#: woocommerce/doctype/woocommerce_customer_role_mapping/woocommerce_customer_role_mapping.json
+msgid "Woocommerce Customer Role Mapping"
+msgstr "Mapping de rôles clients WooCommerce"
+
+#. Name of a DocType
+#: woocommerce/doctype/woocommerce_order/woocommerce_order.json
+msgid "Woocommerce Order"
+msgstr "Commande WooCommerce"
+
+#. Label of a shortcut in the WooCommerce Workspace
+#: woocommerce/workspace/woocommerce/woocommerce.json
+msgid "Woocommerce Out Of Stock Comparison"
+msgstr "Comparaison des produits en rupture de stock dans WooCommerce"
+
+#. Label of the woocommerce_server_url (Data) field in DocType 'Woocommerce
+#. Settings'
+#: woocommerce/doctype/woocommerce_settings/woocommerce_settings.json
+msgid "Woocommerce Server URL"
+msgstr "URL du serveur WooCommerce"
+
+#. Label of the woocommerce_settings (Link) field in DocType 'Woocommerce
+#. Order'
+#. Name of a DocType
+#. Label of a shortcut in the WooCommerce Workspace
+#: woocommerce/doctype/woocommerce_order/woocommerce_order.json
+#: woocommerce/doctype/woocommerce_settings/woocommerce_settings.json
+#: woocommerce/workspace/woocommerce/woocommerce.json
+msgid "Woocommerce Settings"
+msgstr "Paramètres WooCommerce"
+
+#. Label of the woocommerce_shipping_method_id (Data) field in DocType
+#. 'Woocommerce Shipping Methods'
+#: woocommerce/doctype/woocommerce_shipping_methods/woocommerce_shipping_methods.json
+msgid "Woocommerce Shipping Method Id"
+msgstr "ID de mode de livraison dans WooCommerce"
+
+#. Label of the woocommerce_shipping_method_title (Data) field in DocType
+#. 'Woocommerce Shipping Methods'
+#: woocommerce/doctype/woocommerce_shipping_methods/woocommerce_shipping_methods.json
+msgid "Woocommerce Shipping Method Title"
+msgstr "Titre de mode de livraison dans WooCommerce"
+
+#. Label of the shipping_accounts (Table) field in DocType 'Woocommerce
+#. Settings'
+#. Name of a DocType
+#: woocommerce/doctype/woocommerce_settings/woocommerce_settings.json
+#: woocommerce/doctype/woocommerce_shipping_methods/woocommerce_shipping_methods.json
+msgid "Woocommerce Shipping Methods"
+msgstr "Modes de livraison WooCommerce"
+
+#. Name of a DocType
+#: woocommerce/doctype/woocommerce_shipping_statuses/woocommerce_shipping_statuses.json
+msgid "Woocommerce Shipping Statuses"
+msgstr "Statuts d'expédition WooCommerce"
+
+#. Label of a shortcut in the WooCommerce Workspace
+#: woocommerce/workspace/woocommerce/woocommerce.json
+msgid "Woocommerce Stock Comparison"
+msgstr "Comparaison des stocks WooCommerce"
+
+#: woocommerce/doctype/woocommerce_settings/api/products.py:59
+msgid "Woocommerce Sync Error"
+msgstr "Erreur de synchronisation WooCommerce"
+
+#. Label of the woocommerce_tax_id (Int) field in DocType 'Woocommerce Taxes'
+#: woocommerce/doctype/woocommerce_taxes/woocommerce_taxes.json
+msgid "Woocommerce Tax Id"
+msgstr "ID de taxe WooCommerce"
+
+#. Label of the woocommerce_tax_name (Data) field in DocType 'Woocommerce
+#. Taxes'
+#: woocommerce/doctype/woocommerce_taxes/woocommerce_taxes.json
+msgid "Woocommerce Tax Name"
+msgstr "Désignation de taxe WooCommerce"
+
+#. Name of a DocType
+#: woocommerce/doctype/woocommerce_taxes/woocommerce_taxes.json
+msgid "Woocommerce Taxes"
+msgstr "Taxes WooCommerce"
+
+#. Label of the worpdress_api_section (Section Break) field in DocType
+#. 'Woocommerce Settings'
+#: woocommerce/doctype/woocommerce_settings/woocommerce_settings.json
+msgid "Worpdress API"
+msgstr "API Wordpress"

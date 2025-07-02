@@ -1,0 +1,82 @@
+{
+ "charts": [],
+ "color": "#CB2929",
+ "content": "[{\"id\":\"JPXF2XvlwL\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">WooCommerce</span>\",\"col\":12}},{\"id\":\"Uz15PkYVkq\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Disabled or Paused Webhooks on WooCommerce\",\"col\":4}},{\"id\":\"CkFvCKuZMv\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Out of Stock Items\",\"col\":4}},{\"id\":\"aFZcsEIZUS\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"WR5j5DQpKG\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Orders in error\",\"col\":4}},{\"id\":\"PjNG-9nlXH\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Orders pending delivery\",\"col\":4}},{\"id\":\"afFe5qN2EX\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Orders without sales invoices\",\"col\":4}},{\"id\":\"DlBv5JxaX6\",\"type\":\"quick_list\",\"data\":{\"quick_list_name\":\"Orders Integration Errors\",\"col\":12}},{\"id\":\"gVaOBYikyy\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"4v82kqc5lZ\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Reports</b></span>\",\"col\":12}},{\"id\":\"tkuLbxavsv\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Woocommerce Stock Comparison\",\"col\":3}},{\"id\":\"pHgtMD81Rw\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Woocommerce Out Of Stock Comparison\",\"col\":3}},{\"id\":\"nqeVvHRgCh\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"z0DBzFCQzQ\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Settings </b></span>\",\"col\":12}},{\"id\":\"j8J5uee8Zq\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Woocommerce Settings\",\"col\":3}}]",
+ "creation": "2022-12-09 16:36:01.685984",
+ "custom_blocks": [],
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "for_user": "",
+ "hide_custom": 0,
+ "icon": "integration",
+ "idx": 0,
+ "is_hidden": 0,
+ "is_standard": 1,
+ "label": "WooCommerce",
+ "links": [],
+ "modified": "2024-04-18 17:18:24.459415",
+ "modified_by": "Administrator",
+ "module": "WooCommerce",
+ "name": "WooCommerce",
+ "number_cards": [
+  {
+   "label": "Orders in error",
+   "number_card_name": "WooCommerce orders in error"
+  },
+  {
+   "label": "Orders pending delivery",
+   "number_card_name": "WooCommerce orders pending delivery"
+  },
+  {
+   "label": "Disabled or Paused Webhooks on WooCommerce",
+   "number_card_name": "WooCommerce Webhooks Healthcheck"
+  },
+  {
+   "label": "Out of Stock Items",
+   "number_card_name": "WooCommerce Out of Stock Items"
+  },
+  {
+   "label": "Orders without sales invoices",
+   "number_card_name": "WooCommerce orders without sales invoices"
+  }
+ ],
+ "owner": "Administrator",
+ "parent_page": "",
+ "public": 1,
+ "quick_lists": [
+  {
+   "document_type": "Woocommerce Order",
+   "label": "Orders Integration Errors",
+   "quick_list_filter": "{\"status\":[\"=\",\"Error\"]}"
+  }
+ ],
+ "roles": [],
+ "sequence_id": 42.0,
+ "shortcuts": [
+  {
+   "color": "Gray",
+   "columns": 3,
+   "doc_view": "List",
+   "label": "Woocommerce Settings",
+   "link_to": "Woocommerce Settings",
+   "type": "DocType"
+  },
+  {
+   "color": "Gray",
+   "columns": 3,
+   "doc_view": "List",
+   "label": "Woocommerce Stock Comparison",
+   "link_to": "WooCommerce Stock Comparison",
+   "type": "Report"
+  },
+  {
+   "color": "Gray",
+   "columns": 3,
+   "doc_view": "List",
+   "label": "Woocommerce Out Of Stock Comparison",
+   "link_to": "WooCommerce Out of Stock Comparison",
+   "type": "Report"
+  }
+ ],
+ "title": "WooCommerce"
+}

@@ -1,0 +1,18 @@
+include MANIFEST.in
+include requirements.txt
+include *.json
+include *.md
+include *.py
+include *.txt
+recursive-include dokos_woocommerce *.css
+recursive-include dokos_woocommerce *.csv
+recursive-include dokos_woocommerce *.html
+recursive-include dokos_woocommerce *.ico
+recursive-include dokos_woocommerce *.js
+recursive-include dokos_woocommerce *.json
+recursive-include dokos_woocommerce *.md
+recursive-include dokos_woocommerce *.png
+recursive-include dokos_woocommerce *.py
+recursive-include dokos_woocommerce *.svg
+recursive-include dokos_woocommerce *.txt
+recursive-exclude dokos_woocommerce *.pyc

@@ -1,0 +1,4 @@
+dokos_woocommerce.patches.allow_multiple_woocommerce_sites
+dokos_woocommerce.patches.set_default_currency_precision
+dokos_woocommerce.patches.remove_duplicate_orders
+dokos_woocommerce.patches.add_shipping_statuses

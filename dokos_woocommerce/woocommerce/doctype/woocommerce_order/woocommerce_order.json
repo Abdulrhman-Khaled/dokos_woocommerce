@@ -1,0 +1,175 @@
+{
+ "actions": [],
+ "autoname": "format:{woocommerce_settings}-{woocommerce_id}",
+ "creation": "2022-12-08 10:20:50.726595",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "woocommerce_id",
+  "status",
+  "woocommerce_settings",
+  "column_break_xmjv",
+  "order_created",
+  "delivery_note_created",
+  "payment_created",
+  "sales_invoice_created",
+  "section_break_3",
+  "error_message",
+  "error",
+  "error_notification_sent",
+  "section_break_5",
+  "data"
+ ],
+ "fields": [
+  {
+   "default": "Pending",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Status",
+   "options": "Pending\nOrder Created\nOrder Updated\nError\nClosed",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_3",
+   "fieldtype": "Section Break"
+  },
+  {
+   "depends_on": "eval:!doc.error_message",
+   "fieldname": "error",
+   "fieldtype": "Small Text",
+   "label": "Error",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_5",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "data",
+   "fieldtype": "JSON",
+   "label": "Data",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "woocommerce_settings",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Woocommerce Settings",
+   "options": "Woocommerce Settings",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "woocommerce_id",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "WooCommerce ID",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "error_message",
+   "fieldtype": "Small Text",
+   "in_list_view": 1,
+   "label": "Error Message",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "error_notification_sent",
+   "fieldtype": "Check",
+   "hidden": 1,
+   "label": "Error Notification Sent"
+  },
+  {
+   "fieldname": "column_break_xmjv",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "order_created",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "Order Created",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "delivery_note_created",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "Delivery Note Created",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "payment_created",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "Payment Created",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "sales_invoice_created",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "Sales Invoice Created",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-04-03 15:14:51.486897",
+ "modified_by": "Administrator",
+ "module": "WooCommerce",
+ "name": "Woocommerce Order",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "select": 1,
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [
+  {
+   "color": "Blue",
+   "title": "Pending"
+  },
+  {
+   "color": "Yellow",
+   "title": "Order Created"
+  },
+  {
+   "color": "Green",
+   "title": "Order Updated"
+  },
+  {
+   "color": "Red",
+   "title": "Error"
+  },
+  {
+   "color": "Green",
+   "title": "Closed"
+  }
+ ],
+ "title_field": "error_message"
+}

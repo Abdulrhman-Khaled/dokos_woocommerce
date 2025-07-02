@@ -1,0 +1,19 @@
+<p>{{ _("Hello") }}, </p>
+
+<p>{{ _("The following error prevented the full integration of WooCommerce Order {0}").format(doc.woocommerce_id) }}:
+</p>
+
+<pre><code>{{ doc.error_message }}
+</code></pre>
+
+<p>{{ _("Please check the corresponding order to solve the issue and try relaunching the integration") }} </p>
+
+<p>{{ _("Without action from your side, an integration attempt will be automatically triggered on the following events")
+	}}: </p>
+
+<ul>
+	<li>{{ _("A status update on WooCommerce Side") }}</li>
+	<li>{{ _("Once a day, during the night, by Dokos") }}</li>
+</ul>
+
+<p>{{ _("Have a nice day") }}</p>

@@ -1,0 +1,42 @@
+{
+ "actions": [],
+ "autoname": "autoincrement",
+ "creation": "2022-12-08 17:57:39.353821",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "dokos_customer_group",
+  "woocommerce_role"
+ ],
+ "fields": [
+  {
+   "fieldname": "woocommerce_role",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "WooCommerce Role",
+   "reqd": 1
+  },
+  {
+   "fieldname": "dokos_customer_group",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Dokos Customer Group",
+   "options": "Customer Group",
+   "reqd": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2022-12-08 17:59:24.915894",
+ "modified_by": "Administrator",
+ "module": "WooCommerce",
+ "name": "Woocommerce Customer Role Mapping",
+ "naming_rule": "Autoincrement",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
