@@ -74,7 +74,7 @@ def _process_order(order):
 
 def create_update_order(data, site):
 	woocommerce_order_data = data
-	sitename = frappe.get_cached_value("Woocommerce Settings", dict(woocommerce_server_url=site)) or site
+	sitename = frappe.get_cached_value("Woocommerce Settings", {"woocommerce_server_url": site}, "name")
 	if frappe.db.exists("Woocommerce Order", dict(woocommerce_id=woocommerce_order_data.get("id"), woocommerce_settings=sitename)):
 		so = frappe.get_doc("Woocommerce Order", dict(woocommerce_id=woocommerce_order_data.get("id"), woocommerce_settings=sitename), for_update=True)
 		so.data = frappe.as_json(woocommerce_order_data)
@@ -86,7 +86,7 @@ def create_update_order(data, site):
 		frappe.get_doc({
 			"doctype": "Woocommerce Order",
 			"woocommerce_id": woocommerce_order_data.get("id"),
-			"woocommerce_settings": frappe.get_cached_value("Woocommerce Settings", dict(woocommerce_server_url=sitename)),
+			"woocommerce_settings": sitename,
 			"data": frappe.as_json(woocommerce_order_data)
 		}).insert(ignore_if_duplicate=True, ignore_permissions=True)
 
