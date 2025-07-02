@@ -112,39 +112,45 @@ class WooCommerceOrderSync:
 		self.bookings = []
 
 	def sync(self):
-		self.order.db_set("error", "")
-		self.order.db_set("error_message", "")
-		self.order.db_set("error_notification_sent", 0)
+		frappe.logger().debug(f"[Woo Sync] Starting sync for order: {self.order.name}")
 
-		# Completed orders and closed orders refunded or failed don't need to be synchronized again
-		if self.is_completed_order() or self.is_closed_order():
-			self.order.db_set("status", "Order Updated")
-			return self.update_all_creation_statuses()
+		try:
+			self.order.db_set("error", "")
+			self.order.db_set("error_message", "")
+			self.order.db_set("error_notification_sent", 0)
 
-		if self.woocommerce_order.get("customer_id") == 0 and not self.woocommerce_order.get(
-			"billing", {}
-		).get("email"):
-			if self.order.status != "Error":
+			if self.is_completed_order() or self.is_closed_order():
+				self.order.db_set("status", "Order Updated")
+				return self.update_all_creation_statuses()
+
+			if self.woocommerce_order.get("customer_id") == 0 and not self.woocommerce_order.get("billing", {}).get("email"):
 				self.order.db_set("status", "Error")
-			return
+				return
 
-		self.order.db_set("status", "Pending")
+			self.order.db_set("status", "Pending")
+			self.get_customer()
 
-		self.get_customer()
+			if self.customer:
+				self.process_sales_order()
 
-		if self.customer:
-			try:
-				if frappe.db.exists(
-					"Sales Order", {f"woocommerce_id_{self.settings.name}": self.woocommerce_order.get("id"), "docstatus": 1}
-				):
-					self._update_sales_order()
-				elif self.woocommerce_order.get("status") == "cancelled":
-					self.order.db_set("status", "Closed")
-				else:
-					self._new_sales_order()
-			except Exception as e:
-				frappe.db.rollback()
-				self.register_error(error_message=str(e))
+		except Exception as e:
+			self.register_error(error_message=str(e))
+
+	def process_sales_order(self):
+		frappe.logger().debug("[Woo Sync] Processing Sales Order...")
+
+		try:
+			if frappe.db.exists(
+				"Sales Order", {f"woocommerce_id_{self.settings.name}": self.woocommerce_order.get("id"), "docstatus": 1}
+			):
+				self._update_sales_order()
+			elif self.woocommerce_order.get("status") == "cancelled":
+				self.order.db_set("status", "Closed")
+			else:
+				self._new_sales_order()
+		except Exception as e:
+			frappe.db.rollback()
+			self.register_error(error_message=str(e))
 
 	def update_all_creation_statuses(self):
 		for field in ["order_created", "sales_invoice_created", "payment_created", "delivery_note_created"]:
@@ -288,6 +294,13 @@ class WooCommerceOrderSync:
 
 		if error_message:
 			self.order.db_set("error_message", error_message, notify=True)
+		else:
+			error_message = frappe.get_traceback()
+		
+		frappe.log_error(
+			title=f"Woocommerce Order Sync Failed (Order ID: {self.order.name})",
+			message=error_message
+			)
 
 		self.order.reload()
 		self.order.run_notifications("on_error")
