@@ -294,13 +294,6 @@ class WooCommerceOrderSync:
 
 		if error_message:
 			self.order.db_set("error_message", error_message, notify=True)
-		else:
-			error_message = frappe.get_traceback()
-		
-		frappe.log_error(
-			title=f"Woocommerce Order Sync Failed (Order ID: {self.order.name})",
-			message=error_message
-			)
 
 		self.order.reload()
 		self.order.run_notifications("on_error")
