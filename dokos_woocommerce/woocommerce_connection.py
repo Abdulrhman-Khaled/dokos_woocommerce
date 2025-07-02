@@ -89,7 +89,12 @@ def create_new_integration_log(data, site, topic):
 
 
 def handle_webhook(**kwargs):
-	integration_request = frappe.get_doc(kwargs.get("doctype"), kwargs.get("docname"))
+	if "integration_request" in kwargs:
+		integration_request = kwargs["integration_request"]
+	elif "doctype" in kwargs and "docname" in kwargs:
+		integration_request = frappe.get_doc(kwargs["doctype"], kwargs["docname"])
+	else:
+		raise ValueError("No IntegrationRequest provided")
 
 	if handler := handler_map.get(integration_request.service_status):
 		handler(frappe.parse_json(integration_request.data), integration_request.service_document)
