@@ -74,41 +74,23 @@ def _process_order(order):
 
 def create_update_order(data, site):
 	woocommerce_order_data = data
-
-	# Step 1: Get the name of the Woocommerce Settings doc
-	settings_name = frappe.get_cached_value("Woocommerce Settings", {"woocommerce_server_url": site})
-	if not settings_name:
-		frappe.throw(f"Woocommerce Settings not found for site: {site}")
-
-	# Step 2: Check if the order already exists
-	if frappe.db.exists("Woocommerce Order", {
-		"woocommerce_id": woocommerce_order_data.get("id"),
-		"woocommerce_settings": settings_name
-	}):
-		# Update existing order
-		so = frappe.get_doc("Woocommerce Order", {
-			"woocommerce_id": woocommerce_order_data.get("id"),
-			"woocommerce_settings": settings_name
-		}, for_update=True)
+	sitename = frappe.get_cached_value("Woocommerce Settings", dict(woocommerce_server_url=site)) or site
+	if frappe.db.exists("Woocommerce Order", dict(woocommerce_id=woocommerce_order_data.get("id"), woocommerce_settings=sitename)):
+		so = frappe.get_doc("Woocommerce Order", dict(woocommerce_id=woocommerce_order_data.get("id"), woocommerce_settings=sitename), for_update=True)
 		so.data = frappe.as_json(woocommerce_order_data)
 		so.flags.ignore_permissions = True
 		so.save()
-
 		if so.status != "Closed":
 			so.run_method("sync_order")
 	else:
-		# Create new order
 		frappe.get_doc({
 			"doctype": "Woocommerce Order",
 			"woocommerce_id": woocommerce_order_data.get("id"),
-			"woocommerce_settings": settings_name,  # ✅ Fixed here
+			"woocommerce_settings": frappe.get_cached_value("Woocommerce Settings", dict(woocommerce_server_url=sitename)),
 			"data": frappe.as_json(woocommerce_order_data)
-		}).insert(ignore_permissions=True)
-
+		}).insert(ignore_if_duplicate=True, ignore_permissions=True)
 
 def sync_orders(site):
-
-
 	if sync_order in get_jobs()[frappe.local.site]:
 		return
 

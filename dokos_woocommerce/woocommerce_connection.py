@@ -7,7 +7,6 @@ from functools import wraps
 import frappe
 from frappe import _
 from frappe.utils import add_to_date, now_datetime
-import frappe.modules.utils
 
 from dokos_woocommerce.woocommerce.doctype.woocommerce_settings.utils import get_woocommerce_settings
 from dokos_woocommerce.woocommerce.doctype.woocommerce_order.woocommerce_order import (
@@ -89,32 +88,9 @@ def create_new_integration_log(data, site, topic):
 	return integration_request
 
 
-# def handle_webhook(**kwargs):
-# 	integration_request = frappe.get_doc(kwargs.get("doctype"), kwargs.get("docname"))
-
-# 	if handler := handler_map.get(integration_request.service_status):
-# 		handler(frappe.parse_json(integration_request.data), integration_request.service_document)
-# 		integration_request.db_set("status", "Completed")
-
 def handle_webhook(**kwargs):
-    # Safely get integration request
-    integration_request = kwargs.get("integration_request")
+	integration_request = frappe.get_doc(kwargs.get("doctype"), kwargs.get("docname"))
 
-    if not integration_request:
-        doctype = kwargs.get("doctype")
-        docname = kwargs.get("docname")
-        if doctype and docname:
-            integration_request = frappe.get_doc(doctype, docname)
-        else:
-            frappe.throw("Missing integration_request or doctype/docname")
-
-    # Get handler (import if string)
-    handler = kwargs.get("handler")
-    if isinstance(handler, str):
-        handler = frappe.get_attr(handler)
-
-    # Get raw data (JSON string or dict)
-    data = kwargs.get("data") or frappe.parse_json(integration_request.data)
-
-    # Run the handler
-    handler(data, integration_request.service_document)
+	if handler := handler_map.get(integration_request.service_status):
+		handler(frappe.parse_json(integration_request.data), integration_request.service_document)
+		integration_request.db_set("status", "Completed")
